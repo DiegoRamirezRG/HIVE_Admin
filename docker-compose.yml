@@ -1,0 +1,35 @@
+services:
+  # Servicio PHP
+  php:
+    build: 
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    container_name: php-container
+    working_dir: /var/www
+    volumes:
+      - ./app/:/var/www/html
+    ports:
+      - 8080:80
+    depends_on:
+      - mysql
+
+  # Servicio Mysql
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./docker/database/:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  # phpmyadmin
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin-container
+    ports:
+      - 8081:80
+    environment:
+      - PMA_HOST=mysql
+      - PMA_PORT=3306

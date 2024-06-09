@@ -1,0 +1,14 @@
+{
+    "name": "diego/hive",
+    "description": "HIVE Admin Control Panel",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Diego Ramirez",
+            "email": "dieghoramreyes@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/dotenv": "6.4.8"
+    }
+}

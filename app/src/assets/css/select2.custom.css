@@ -1,0 +1,14 @@
+.select2-dropdown {
+    max-height: 200px !important;
+    overflow-y: auto !important;
+}
+
+.select2-dropdown::-webkit-scrollbar {
+    width: 0.25rem !important;
+    background-color: #eee;
+}
+
+.select2-dropdown::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 10rem;
+}

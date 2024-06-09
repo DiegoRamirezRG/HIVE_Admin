@@ -1,0 +1,3 @@
+/docker/database
+/app/vendor
+/app/.env
